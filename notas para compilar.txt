@@ -1,0 +1,20 @@
+atajos vscode
+wind + tab = ventanas de windows
+ctrl + comilla invertida =cerrar/abrir terminal
+del *.exe  = despues de correr cada programa para eliminar archivos .exe
+dir *exe = ver archivos .exe
+ctrl + s = guardar
+ctrl + tab = moverse entre pestanas de vscode
+crtl + F4 = cierra archivo en vscode
+alt + F4 = cierra vscode
+ctrl + F = buscar
+command + z = rompe lineas
+ctrl + B = ocultar/mostrar EXPLORADOR vscode
+prompt $g = borra la ruta a >
+prompt $p$g = restaura la ruta de la linea de comandos
+
+copiar el codigo en la carpeta del compilador D:\gccv2\bin, 
+donde D = la memoria USB, compilar con: ($ = prompt)
+
+> gcc archivo.c -o nombreEjecutable
+> nombreEjecutable   ##para ejecutar
