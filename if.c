@@ -82,7 +82,7 @@ void kk()
 }
 void kk1()
 {
-    printf("If not himself, then he has naght\n");
+    printf("If not himself, then he has naught\n");
     system("pause");
     system("cls");
 }
