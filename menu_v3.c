@@ -52,7 +52,6 @@ int impEquipo(int L, int W)
 int main(void)
 {
     system("chcp 65001 > nul");
-    // setlocale(LC_ALL, "Spanish_Mexico");
 
     int ancho = 110;
     int alto = 20;
