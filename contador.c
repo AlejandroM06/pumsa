@@ -2,24 +2,26 @@
 #include <locale.h>
 #include <stdlib.h>
 
-void causa();
-void parce();
+void causa(int c);
+void parce(int i, int e);
+void Map(int f);
 
-int main()
+int main(int c, int i, int e, int f)
 {
-    int c;
     system("chcp 65001 > nul");
     system("cls");
-    causa();
+    causa(c);
     printf("\n\n\n");
-    parce();
+    parce(i, e);
+    printf("\n\n\n");
+    Map(f);
 
     return 0;
 }
 
-void causa()
+void causa(int c)
 {
-    int c = 10;
+    c = 10;
 
     printf("Cuenta Regresiva:\n");
 
@@ -29,16 +31,26 @@ void causa()
         c--;
     }
 
-    printf("¡Lanzamiento!\n");
+    printf("¡Tururu ruru!\n");
 }
 
-void parce()
+void parce(int i, int e)
 {
-    int c;          
-    int l = 10;
+    i;
+    e = 10;
 
-    for (c = 1; c <= l; c++)
+    for (i = 1; i <= e; i++)
     {
-        printf("Contador: %d\n", c);
+        printf("Contador: %d\n", i);
+    }
+}
+
+void Map(int f)
+{
+    f = 0;
+
+    for (f = 0; f <= 10; f++)
+    {
+        printf("Cumalala cumalala: %d \n", f);
     }
 }
