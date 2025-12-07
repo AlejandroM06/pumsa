@@ -5,7 +5,7 @@
 
 void menu()
 {
-    int ancho = 80;
+    int ancho = 50;
     int alto = 20;
     int L, W;
     int opc = -1;
