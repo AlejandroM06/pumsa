@@ -3,6 +3,15 @@
 #include <string.h>
 #include <locale.h>
 
+void menu();
+void contador();
+
+int main()
+{
+    system("chcp 65001 > nul");
+    menu();
+    return 0;
+}
 void menu()
 {
     int ancho = 50;
@@ -66,37 +75,13 @@ void menu()
         switch (opc)
         {
         case 1:
-            int i;
-            printf("Estamos en el ejercicio 1\n");
-            for (i = 0; i <= 20; i++)
-            {
-                printf("Contador: %d \n", i);
-            }
+            contador();
             break;
 
         case 2:
-            printf("Estamos en el ejercicio 2 \n");
-            int e = 0;
-            while (e <= 10)
-            {
-                printf("Otro contador jaja: %d \n", e);
-                e++;
-            }
             break;
 
         case 3:
-            float num;
-            printf("Estamos en el ejercicio 3\n");
-            printf("Dame un número: ");
-            scanf("%f", &num);
-            if (num > 20)
-            {
-                printf("Mayor a 20\n");
-            }
-            else
-            {
-                printf("Menor a 20\n");
-            }
             break;
 
         case 4:
@@ -113,9 +98,17 @@ void menu()
     }
 }
 
-int main()
+void contador()
 {
-    system("chcp 65001 > nul");
-    menu();
-    return 0;
+    int i;
+    for (i = 0; i <= 20; i++)
+        printf("hola %d \n", i);
+}
+
+void pregunta(){
+
+    char nombre[100];
+    printf("¿Cuál es el nombre de tu gato gordo?: ");
+    fgets(nombre, 100, stdin);
+    
 }
