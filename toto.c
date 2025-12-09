@@ -72,7 +72,7 @@ void menu()
             L++;
         }
         printf("\nElige una opcion y pulsa la tecla ENTER para continuar: ");
-        scanf("%i", &opc);
+        scanf("%d", &opc);
         system("cls");
         switch (opc)
         {
@@ -105,8 +105,11 @@ void menu()
 void contador()
 {
     int i;
-    for (i = 0; i <= 20; i++)
+    for (i = 0; i <= 5; i++)
+    {
         printf("hola %d \n", i);
+    }
+    
 }
 
 void pregunta()
