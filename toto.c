@@ -105,9 +105,10 @@ void menu()
 void contador()
 {
     int i;
+    printf("Checa we, un contador así bien tryhard\n");
     for (i = 0; i <= 5; i++)
     {
-        printf("hola %d \n", i);
+        printf("%d \n", i);
     }
     
 }
@@ -153,7 +154,7 @@ void decision()
     while (getchar() != '\n')
         ;
     system("cls");
-    if (mam > 0 && mam < 3)
+    if (mam > 0 && mam <= 3)
     {
         printf("Usted es regularmente mampo, le recomiendo dejar de ver hombres peludos \n");
     }
