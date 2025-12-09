@@ -78,6 +78,7 @@ void menu()
         {
         case 1:
             contador();
+            printf("\n");
             break;
 
         case 2:
@@ -104,13 +105,19 @@ void menu()
 
 void contador()
 {
+    int a = 0;
     int i;
     printf("Checa we, un contador así bien tryhard\n");
     for (i = 0; i <= 5; i++)
     {
         printf("%d \n", i);
     }
-    
+    printf("Otro pero ahora en fila: ");
+    while (a <= 5)
+    {
+        printf("%d ", a);
+        a++;
+    }
 }
 
 void pregunta()
