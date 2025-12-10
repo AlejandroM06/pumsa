@@ -3,6 +3,16 @@
 #include <string.h>
 #include <locale.h>
 
+#define F_YELLOW_EX "\x1b[93m"
+#define F_GREEN_EX "\x1b[92m"
+#define F_BLUE_EX "\x1b[94m"
+#define F_RED_EX "\x1b[91m"
+#define F_MAGENTA_EX "\x1b[95m"
+#define F_ROSE "\x1B[38;2;255;151;203m"
+#define F_CYAN_EX "\x1b[96m"
+#define F_GRAY_EX "\x1b[90m"
+#define F_RESET "\x1b[0m"
+
 void menu();
 void contador();
 void pregunta();
@@ -31,9 +41,9 @@ void menu()
             while (W < ancho)
             {
                 if (L == 0 || L == alto - 1)
-                    printf("=");
+                    printf(F_BLUE_EX "=" F_RESET);
                 else if (W == 0 || W == ancho - 1)
-                    printf("|");
+                    printf(F_GREEN_EX "|" F_RESET);
                 else if (L == 2 && W == 6)
                 {
                     printf("Menu de opciones.");
@@ -71,14 +81,14 @@ void menu()
             printf("\n");
             L++;
         }
-        printf("\nElige una opcion y pulsa la tecla ENTER para continuar: ");
+        printf("\nElige una opcion y pulsa la tecla ENTER para continuar:" F_YELLOW_EX " ");
         scanf("%d", &opc);
         system("cls");
         switch (opc)
         {
         case 1:
             contador();
-            printf("\n");
+            printf(F_CYAN_EX "\n");
             break;
 
         case 2:
@@ -90,14 +100,15 @@ void menu()
             break;
 
         case 4:
-            printf("\nPresiona cualquier tecla para salir... \n");
+            printf(F_CYAN_EX "\nPresiona cualquier tecla para salir... \n" F_RESET);
             break;
 
         default:
-            printf("Ingresa una opcion valida. \n\n");
+            printf(F_RESET "Ingresa una opcion valida. \n\n");
         }
         if (opc != 4)
         {
+            printf(F_CYAN_EX "");
             system("pause");
         }
     }
@@ -107,15 +118,15 @@ void contador()
 {
     int a = 0;
     int i;
-    printf("Checa we, un contador así bien tryhard\n");
+    printf(F_MAGENTA_EX "Checa we, un contador así bien tryhard\n" F_RESET);
     for (i = 0; i <= 5; i++)
     {
-        printf("%d \n", i);
+        printf(F_RED_EX "%d \n" F_RESET, i);
     }
-    printf("Otro pero ahora en fila: ");
+    printf(F_ROSE "Otro pero ahora en fila: " F_RESET);
     while (a <= 5)
     {
-        printf("%d ", a);
+        printf(F_BLUE_EX "%d " F_RESET, a);
         a++;
     }
 }
@@ -132,46 +143,52 @@ void pregunta()
     memset(&c1, 0, sizeof(cat));
     while (getchar() != '\n' && getchar() != EOF)
         ;
-
     for (int n = 0; n < 3; n++)
     {
 
-        printf("Tu gato gordo tiene el número %d, ingresa su nombre: ", n + 1);
+        printf(F_GREEN_EX"Tu gato gordo tiene el número %d, ingresa su nombre:"F_GRAY_EX" ", n + 1);
         fgets(c1[n].nombre, sizeof(c1->nombre), stdin);
         c1[n].nombre[strcspn(c1[n].nombre, "\n")] = '\0';
         system("cls");
-        printf("Ingrese el peso de %s en kg: ", c1[n].nombre);
+        printf(F_GREEN_EX"Ingrese el peso de %s en kg:"F_GRAY_EX" ", c1[n].nombre);
         scanf("%f", &c1[n].peso);
         while (getchar() != '\n')
             ;
         system("cls");
     }
-    printf("Lista de michis gordos\n");
+    printf(F_GREEN_EX"Lista de michis gordos\n");
     for (int n = 0; n < 3; n++)
     {
-        printf("El gato gordo número %d se llama %s y pesa %.2f kg\n", n + 1, c1[n].nombre, c1[n].peso);
+        printf(F_GREEN_EX"El gato gordo número "F_GRAY_EX"%d "F_GREEN_EX"se llama "F_GRAY_EX"%s "F_GREEN_EX"y pesa "F_GRAY_EX"%.2f kg\n", n + 1, c1[n].nombre, c1[n].peso);
     }
 }
 
 void decision()
 {
     int mam;
-    printf("Ingrese su nivel de mamposidad del 1 al 5, siendo 1 poco mampo, y 5 muy mampo: ");
+    printf(F_BLUE_EX "Ingrese su nivel de mamposidad del 1 al 5, siendo 1 poco mampo, y 5 muy mampo: ");
     scanf("%d", &mam);
     while (getchar() != '\n')
         ;
     system("cls");
     if (mam > 0 && mam <= 3)
     {
-        printf("Usted es regularmente mampo, le recomiendo dejar de ver hombres peludos \n");
+        printf(F_GREEN_EX "Usted es regularmente mampo, le recomiendo dejar de ver hombres peludos \n");
     }
     else if (mam >= 4 && mam <= 5)
     {
-        printf("Usted ya no tiene cura, le gusta el coyolito tierno \n");
+        printf(F_RED_EX "Usted ya no tiene cura, le gusta el coyolito tierno\n");
+    }
+    else if (mam == 67)
+    {
+        printf(F_GRAY_EX "¿Esa perra mamada qué?\n" F_CYAN_EX);
+        system("pause");
+        system("cls");
+        decision();
     }
     else
     {
-        printf("A parte de Mampo, pendejo. ¿Qué parte de que es de 1 a 5 no entendió? Simio en brama \n");
+        printf(F_CYAN_EX "A parte de Mampo, pendejo. ¿Qué parte de que es de 1 a 5 no entendió? Simio en brama \n");
         system("pause");
         system("cls");
         decision();
