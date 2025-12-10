@@ -81,7 +81,7 @@ void menu()
             printf("\n");
             L++;
         }
-        printf("\nElige una opcion y pulsa la tecla ENTER para continuar:" F_YELLOW_EX " ");
+        printf("\nElige una opcion y pulsa la tecla ENTER para continuar: " F_YELLOW_EX " ");
         scanf("%d", &opc);
         system("cls");
         switch (opc)
@@ -140,26 +140,26 @@ void pregunta()
     } cat;
 
     cat c1[3];
-    memset(&c1, 0, sizeof(cat));
+    memset(&c1, 0, sizeof(c1));
     while (getchar() != '\n' && getchar() != EOF)
         ;
     for (int n = 0; n < 3; n++)
     {
 
-        printf(F_GREEN_EX"Tu gato gordo tiene el número %d, ingresa su nombre:"F_GRAY_EX" ", n + 1);
+        printf(F_GREEN_EX "Tu gato gordo tiene el número %d, ingresa su nombre:" F_GRAY_EX " ", n + 1);
         fgets(c1[n].nombre, sizeof(c1->nombre), stdin);
         c1[n].nombre[strcspn(c1[n].nombre, "\n")] = '\0';
         system("cls");
-        printf(F_GREEN_EX"Ingrese el peso de %s en kg:"F_GRAY_EX" ", c1[n].nombre);
+        printf(F_GREEN_EX "Ingrese el peso de %s en kg:" F_GRAY_EX " ", c1[n].nombre);
         scanf("%f", &c1[n].peso);
         while (getchar() != '\n')
             ;
         system("cls");
     }
-    printf(F_GREEN_EX"Lista de michis gordos\n");
+    printf(F_GREEN_EX "Lista de michis gordos\n");
     for (int n = 0; n < 3; n++)
     {
-        printf(F_GREEN_EX"El gato gordo número "F_GRAY_EX"%d "F_GREEN_EX"se llama "F_GRAY_EX"%s "F_GREEN_EX"y pesa "F_GRAY_EX"%.2f kg\n", n + 1, c1[n].nombre, c1[n].peso);
+        printf(F_GREEN_EX "El gato gordo número " F_GRAY_EX "%d " F_GREEN_EX "se llama " F_GRAY_EX "%s " F_GREEN_EX "y pesa " F_GRAY_EX "%.2f kg\n", n + 1, c1[n].nombre, c1[n].peso);
     }
 }
 
