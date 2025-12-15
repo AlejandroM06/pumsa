@@ -72,9 +72,9 @@ int main(void)
             while (W < ancho)
             {
                 if (L == 0 || L == alto - 1)
-                    printf(F_GREEN_EX"="F_RESET);
+                    printf(F_GREEN_EX "=" F_RESET);
                 else if (W == 0 || W == ancho - 1)
-                    printf(F_CYAN_EX"|"F_RESET);
+                    printf(F_CYAN_EX "|" F_RESET);
                 else if (L == 1 && W == 2)
                 {
                     printf("Menu de opciones.");
@@ -92,7 +92,7 @@ int main(void)
                     {
                         if (indc == opcSeleccion)
                         {
-                            printf(F_RED_EX"➤"F_BLUE_EX"  %s   "F_RESET, opc[indc]);
+                            printf(F_RED_EX "➤" F_BLUE_EX "  %s   " F_RESET, opc[indc]);
                             W += strlen(opc[indc]) + 5;
                         }
                         else
