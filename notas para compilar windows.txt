@@ -1,6 +1,7 @@
 atajos vscode
 wind + tab = ventanas de windows
-ctrl + ñ =cerrar/abrir terminal
+ctrl + ñ = cerrar/abrir terminal
+ctrl + ` = cerrar/abrir terminal english keyboard
 del *.exe  = despues de correr cada programa para eliminar archivos .exe
 dir *exe = ver archivos .exe
 ctrl + s = guardar
