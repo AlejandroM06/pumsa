@@ -5,42 +5,22 @@
 #include <conio.h>
 #include <windows.h>
 
+#define F_YELLOW_EX "\x1b[93m"
+#define F_GREEN_EX "\x1b[92m"
+#define F_BLUE_EX "\x1b[94m"
+#define F_RED_EX "\x1b[91m"
+#define F_MAGENTA_EX "\x1b[95m"
+#define F_ROSE "\x1B[38;2;255;151;203m"
+#define F_CYAN_EX "\x1b[96m"
+#define F_GRAY_EX "\x1b[90m"
+#define F_RESET "\x1b[0m"
+
 int impEquipo(int L, int W)
 {
     if (L == 9 && W == 6)
     {
-        printf("Fundamentos de programación");
-        return strlen("Fundamentos de programación") - 1;
-    }
-    else if (L == 10 && W == 6)
-    {
-        printf("Práctica: 10");
-        return strlen("Práctica: 10") - 1;
-    }
-    else if (L == 11 && W == 6)
-    {
-        printf("Sección d02");
-        return strlen("Sección d02") - 1;
-    }
-    else if (L == 12 && W == 6)
-    {
         printf("Montes Domínguez Alejandro");
         return strlen("Montes Dominguez Alejandro");
-    }
-    else if (L == 13 && W == 6)
-    {
-        printf("Orozco García Jorge Clemente");
-        return strlen("Orozco Garcia Jorge Clemente");
-    }
-    else if (L == 14 && W == 6)
-    {
-        printf("Trujillo Avila Alan David");
-        return strlen("Trujillo Avila Alan David");
-    }
-    else if (L == 15 && W == 6)
-    {
-        printf("López Medina Allan Octavio");
-        return strlen("Lopez Medina Allan Octavio");
     }
     return 0;
 }
@@ -92,9 +72,9 @@ int main(void)
             while (W < ancho)
             {
                 if (L == 0 || L == alto - 1)
-                    printf("=");
+                    printf(F_GREEN_EX "=" F_RESET);
                 else if (W == 0 || W == ancho - 1)
-                    printf("|");
+                    printf(F_CYAN_EX "|" F_RESET);
                 else if (L == 1 && W == 2)
                 {
                     printf("Menu de opciones.");
@@ -112,7 +92,7 @@ int main(void)
                     {
                         if (indc == opcSeleccion)
                         {
-                            printf("➤  %s   ", opc[indc]);
+                            printf(F_RED_EX "➤" F_BLUE_EX "  %s   " F_RESET, opc[indc]);
                             W += strlen(opc[indc]) + 5;
                         }
                         else
