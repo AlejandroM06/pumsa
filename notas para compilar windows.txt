@@ -26,8 +26,12 @@ prompt $p$g = restaura la ruta de la linea de comandos
 copiar el codigo en la carpeta del compilador D:\gccv2\bin, 
 donde D = la memoria USB, compilar con: ($ = prompt)
 
+C
 > gcc archivo.c -o nombreEjecutable
 > nombreEjecutable   ##para ejecutar
+
+Python
+>python nombreArchivo
 
 GIT
 To remove the file from both the repository and your local filesystem: git rm <filename>
