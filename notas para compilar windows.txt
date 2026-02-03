@@ -12,6 +12,7 @@ alt + F4 = cierra vscode
 ctrl + F = buscar
 ctrl + H = reemplazar
 ctrl + K +F = cerrar carpeta
+ctrl + shift + A = comment block
 shift + alt + F = Format Document
 ctrl + A = seleccionar todo
 alt + z = rompe lineas

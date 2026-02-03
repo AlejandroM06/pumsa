@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include <locale.h>
 #include <stdlib.h>
+#include <string.h>
 
-int ej1()
+/* int ej1()
 {
     system("cls");
 
@@ -97,17 +98,64 @@ void kk3()
     printf("\nThe record shows I took the blows...\n");
     system("pause");
     system("cls");
-}
+} */
+
+void pedirCalificacion();
+
 int main()
 {
+    
     setlocale(LC_ALL, "es_ES.UTF-8");
-    ej1();
+    pedirCalificacion();
+    /*ej1();
     kk();
     ej2();
     kk1();
     ej3();
     kk2();
     ej4();
-    kk3();  
+    kk3();  */
     return 0;
+}
+
+void pedirCalificacion()
+{   
+    float materia1; 
+    float materia2; 
+    float materia3;
+    float sumaMaterias;
+    float promedio;
+
+    system("cls");
+    printf("Si captura un dato fuera del rango de 0 a 100, su captura de datos se reiniciará.\n");
+    system("pause");
+    system("cls");
+    printf("Calificación de la primer materia: \n");
+    scanf("%f", &materia1);
+    if (materia1 < 0 || materia1 > 100){
+       return pedirCalificacion();
+    }
+    system("cls");
+    printf("Calificación de la segunda materia: \n");
+    scanf("%f", &materia2);
+    if (materia2 < 0 || materia2 > 100){
+        return pedirCalificacion();
+    }
+    system("cls");
+    printf("Calificación de la tercer materia: \n");
+    scanf("%f", &materia3);
+    if (materia3 < 0 || materia3 > 100){
+        return pedirCalificacion();
+    }
+    system("cls");
+
+    sumaMaterias = materia1 + materia2 + materia3;
+    promedio = sumaMaterias / 3;
+
+    if (promedio < 70.00){
+        printf("Su promedio es menor a 70.00. Está reprobado");
+    }
+    else {
+        printf("Su promedio es %.2f. Usted hacaprobado la materia :)", promedio);
+    }
 }
