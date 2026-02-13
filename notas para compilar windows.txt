@@ -5,6 +5,7 @@ ctrl + ` = cerrar/abrir terminal english keyboard
 del *.exe  = despues de correr cada programa para eliminar archivos .exe
 dir *exe = ver archivos .exe
 ctrl + s = guardar
+ctrl + d + ctrl + d = duplicar linea
 ctrl + tab = moverse entre pestanas de vscode
 crtl + F4 = cierra archivo en vscode
 ctrl + w = tambien cierra archivo en vscode
