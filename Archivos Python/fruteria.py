@@ -1,6 +1,6 @@
-import os
+import subprocess
 
-os.system("cls")
+subprocess.run(["cmd", "/c", "cls"])
 print("Fruteria -- EL INGE")
 print("====================\n")
 
