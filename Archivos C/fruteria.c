@@ -3,7 +3,8 @@
 #define F_GRAY_EX "\x1b[90m"
 #define F_RESET "\x1b[0m"
 
-int main(){
+int main()
+{
     float manzanas, uvas, peras, iva, subtotal, total;
     float kiloManz, kiloUva, kiloPera;
     iva = 16 * 0.01;
@@ -11,9 +12,9 @@ int main(){
     printf("FRUTERIA - EL INGE\n");
     printf("==================\n");
     printf("Ingrese el precio de 1 kg de manzanas, uvas y peras: ");
-    printf(F_GRAY_EX"\n(ingrese separando los precios con una '/' )"F_RESET);
+    printf(F_GRAY_EX "\n(ingrese separando los precios con una '/' )" F_RESET);
     printf("\n>> ");
-    scanf("%f / %f / %f", &manzanas, &uvas, & peras);
+    scanf("%f / %f / %f", &manzanas, &uvas, &peras);
     printf("\nIngrese el numero de kg de manzanas que desea llevar: ");
     scanf("%f", &kiloManz);
     printf("Ingrese el numero de kg de manzanas que desea llevar: ");
@@ -30,6 +31,6 @@ int main(){
     printf("Subtotal = %.2f\n", subtotal);
     printf("IVA = %.2f\n", iva * subtotal);
     printf("Total = %.2f\n", total);
-    
+
     return 0;
 }
