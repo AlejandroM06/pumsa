@@ -1,7 +1,9 @@
 import subprocess
 
-def clr(): 
+
+def clr():
     subprocess.run(["cmd", "/c", "cls"])
+
 
 ancho = 80
 alto = 20
