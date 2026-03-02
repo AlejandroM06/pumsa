@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <locale.h>
 #include <string.h>
-#include <conio.h>
 #include <windows.h>
 
 #define F_YELLOW_EX "\x1b[93m"
